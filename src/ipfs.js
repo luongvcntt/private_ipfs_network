@@ -1,7 +1,10 @@
-const IPFS = require ('ipfs-http-client');
-const ipfs = /*new*/ IPFS.create({
-    host: 'ipfs.infura.io',
-    port: 5001,
-    protocol: 'https'
+const IPFS = require("ipfs-http-client");
+const ipfs = IPFS.create({
+  host: "localhost",
+  port: 5001,
+  protocol: "http",
+  headers: {
+    Origin: "http://localhost:3000",
+  },
 });
 export default ipfs;
